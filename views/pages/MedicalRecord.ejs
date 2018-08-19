@@ -1,0 +1,164 @@
+<!doctype html>
+<% include ../partials/header %>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Medical Record System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/offcanvas.css" rel="stylesheet">
+    <!--leaflet css -->
+  </head>
+
+  <body class="bg-light">
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/MedicalRecord">Medial Records</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <form class="well form-horizontal" action=" " method="POST">
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>New Medical record</legend>
+
+          <!-- Text input-->
+
+          <div class="form-group" id="firstNameDiv">
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <input name="firstName" id="firstName" placeholder="First name" class="form-control" type="text">
+              </div>
+            </div>
+          </div>
+
+          <!-- Text input-->
+
+          <div class="form-group" id="lastNameDiv">
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <input name="lastName" id="lastName" placeholder="Last name" class="form-control" type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="radio" id="radioButtonDiv">
+            <label>
+              <input type="radio" name="gender" id="gender" value="Male">Male</label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" id="gender" value="Female">Female</label>
+          </div>
+          <!-- Text input-->
+
+          <div class="form-group">
+            <div class="col-md-4 selectContainer">
+              <div class="input-group">
+                <input name="age" id="age" placeholder="Age" class="form-control" type="text" pattern="^[0-9]*$">
+              </div>
+            </div>
+          </div>
+
+          <!-- Text input-->
+
+          <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <select name="city" id="city" class="form-control selectpicker">
+                  <option value=" ">City</option>
+                  <option>Kigali</option>
+                  <option>Bujumbura</option>
+                  <option>Lagos</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text input-->
+
+          <div class="form-group">
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <select name="country" id="country" class="form-control selectpicker">
+                  <option value=" ">Country</option>
+                  <option>Rwanda</option>
+                  <option>Burundi</option>
+                  <option>Nigeria</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+          <div>
+            <p>Living with Diabetes?</p>
+            <div class="radio">
+              <label>
+                <input type="radio" name="diabeteStatus" id="diabeteStatus">Yes</label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="diabeteStatus" id="diabeteStatus">No</label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="diabeteStatus" id="diabeteStatus">Unkown</label>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+              <button id="saveMedicalRecord" class="btn btn-primary">SAVE
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <p>________________________________________________________________________________________________________________________________________</p>
+      <div id="result"></div>
+
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script>window.jQuery || document.write('<script src="../js/jquery-slim.min.js"><\/script>')</script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/holder.min.js"></script>
+    <script src="../js/offcanvas.js"></script>
+    <script src="../js/jquerymin.js"></script>
+    <script src="../js/clientSide.js"></script>
+
+    <!--script to load  alerts-->
+  </body>
+
+  </html>
+  <% include ../partials/footer %>
